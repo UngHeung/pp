@@ -1,0 +1,14 @@
+@import url(../webFont.css);
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+p {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    font-size: 40px;
+}
