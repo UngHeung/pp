@@ -1,0 +1,26 @@
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+
+    width: 500px;
+    height: 500px;
+
+    background-color: #fff;
+    text-align: center;
+
+    transition: .5s;
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+
+    background-color: #fff;
+    border-radius: 20px;
+
+    transition: .5s;
+}

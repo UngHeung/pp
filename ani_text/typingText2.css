@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    background-color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    font-family: 'Ubuntu';
+    font-size: 40px;
+    color: #fff;
+}
+
+/* after -> 텍스트 뒷쪽에 위치 */
+.typeText::after {
+    content: "|";
+    
+    /* 항상 깜빡이기 */
+    /* animation: blink .5s step-end infinite; */
+
+    /* 타이핑 끝났을 때만 깜빡이기 A */
+    animation: none;
+}
+
+/* 타이핑 끝났을 때만 깜빡이기 B */
+.showAnim.typeText::after {
+    animation: blink .5s step-end infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

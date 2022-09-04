@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    background-color: #333;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+}
+
+.text-box {
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+
+.cursor {
+    animation: type 0.5s infinite;
+    font-weight: 900;
+    font-size: 80px;
+    color: #fff;
+}
+
+.text-area {
+    font-weight: 900;
+    font-size: 80px;
+    color: #fff;
+}
+
+@keyframes type {
+    to {
+        opacity: 0;
+    }
+}
