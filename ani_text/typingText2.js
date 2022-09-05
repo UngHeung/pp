@@ -63,14 +63,13 @@ function playAnim() {
 
                     playAnim();
                 }, 1000);
-
                 return
-            }else {
+            } else {
                 // index 1 증가
                 index++;
             }
         // 문자 삭제
-        }else {
+        } else {
             // 더이상 삭제할 문자가 없을 때
             if(index == 0) {
                 isAdding = true;
@@ -82,8 +81,8 @@ function playAnim() {
                 // textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length;
 
                 // 랜덤으로 가져오기
-                textToBeTypedIndex = (rand) % textToBeTypedArr.length;
-            }else {
+                textToBeTypedIndex = rand % textToBeTypedArr.length;
+            } else {
                 // index 1 감소
                 index--;
             }
