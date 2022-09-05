@@ -1,15 +1,14 @@
 function textDisplay(element) {
-    const textArray = element.innerText.split('');
-    const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
-    const exception = [' ', '\n', '.', ',', ':'];
+    const textArray = element.innerText.split("");
+    const special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+    const exception = [" ", "\n", ".", ",", ":"];
 
     const randomIntBetween = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     };
 
-
     const numArray = [];
-    textArray.forEach(_ => {
+    textArray.forEach((_) => {
         const num = randomIntBetween(5, 40);
         numArray.push(num);
     });
@@ -18,21 +17,21 @@ function textDisplay(element) {
     let completeCount;
     const timer = setInterval(() => {
         completeCount = 0;
-        newText = '';
+        newText = "";
         numArray.forEach((num, i) => {
-            if(exception.includes(textArray[i]) || numArray[i] === 0) {
+            if (exception.includes(textArray[i]) || numArray[i] === 0) {
                 newText += textArray[i];
                 completeCount += 1;
-            }else {
+            } else {
                 newText += special[numArray[i] % special.length];
                 numArray[i] = --num;
             }
         });
 
         element.innerText = newText;
-        if(completeCount === numArray.length) clearInterval(timer);
+        if (completeCount === numArray.length) clearInterval(timer);
     }, 100);
 }
 
-const p = document.querySelector('p');
+const p = document.querySelector("p");
 textDisplay(p);
