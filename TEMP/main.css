@@ -1,0 +1,78 @@
+@import url(../reset.css);
+@import url(../webFont.css);
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+p {
+    position: absolute;
+    font-family: 'GangwonEduPowerExtraBoldA';
+    font-size: 80px;
+    color: #fff;
+}
+
+.text-box {
+    position: absolute;
+
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+
+.cursor {
+    animation: type 0.5s infinite;
+    font-weight: 900;
+    font-size: 60px;
+    color: #fff;
+}
+
+.text-area {
+    font-weight: 900;
+    font-size: 60px;
+    color: #fff;
+}
+
+@keyframes type {
+    to {
+        opacity: 0;
+    }
+}
+
+.night-sky {
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(18, 18, 30));
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sky {
+    width: 100vw;
+    height: 100vw;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    animation: moveStar 240s linear infinite;
+}
+
+.sky .star {
+    fill: #fff;
+    stroke: none;
+    stroke-width: 0;
+}
+
+@keyframes moveStar {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

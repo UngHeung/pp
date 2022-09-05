@@ -33,7 +33,7 @@ const makeStars = () => {
 };
 
 // TEXT
-const textCont = "I LOVE JEJU!\n제주도 놀러가고싶다.";
+const textCont = "놀고싶다 격하게\n놀러가고싶다.";
 const textArea = document.querySelector(".text-area");
 
 let cnt = 0;
