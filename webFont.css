@@ -1,3 +1,11 @@
+/* 나눔고딕 */
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.wf-nanumgothic {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 /* 강원교육튼튼 */
 @font-face {
     font-family: 'GangwonEduPowerExtraBoldA';
