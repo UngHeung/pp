@@ -21,7 +21,7 @@ body {
     border-radius: 150px;
 
     background:
-        linear-gradient(50deg,
+        linear-gradient(60deg,
             rgba(255, 62, 62, 1) 10%,
             rgba(246, 170, 78, .1) 60%),
         linear-gradient(100deg,
@@ -40,29 +40,34 @@ body {
             rgba(49, 73, 153, 1) 10%,
             rgba(191, 82, 209, .1) 60%),
         linear-gradient(350deg,
-            rgba(191, 82, 209, 1) 10%,
+            rgba(205, 82, 226, 1) 10%,
             rgba(191, 82, 209, .1) 60%),
         linear-gradient(360deg,
-            rgba(191, 82, 209, 1) 10%,
+            rgb(205, 82, 226) 10%,
             rgba(255, 62, 62, .1) 60%);
     /* rgba(255, 62, 62, .1) 60%); */
 
     /* filter: brightness(120%); */
-    filter: drop-shadow(0px 0px 10px white);
 }
 
 .circle:hover {
-    animation: spin 5s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+.circle:hover>.inner-circle {
+    animation: spin 1s infinite linear;
 }
 
 .inner-circle {
-    width: 290px;
-    height: 290px;
+    width: 295px;
+    height: 295px;
 
     background-color: #333;
 
     border-radius: 150px;
 }
+
+
 
 
 
@@ -74,7 +79,24 @@ body {
 
     50% {
         transform: rotate(180deg);
-        filter: drop-shadow(0px 0px 10px white);
+        filter: drop-shadow(0px 0px 2px white);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: drop-shadow(0px 0px 0px #333);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+        filter: drop-shadow(0px 0px 0px #333);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        filter: drop-shadow(inset 0px 0px 2 white);
     }
 
     100% {
